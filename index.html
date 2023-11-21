@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      form {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 300px;
+        text-align: left;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: bold;
+      }
+
+      input {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 16px;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+
+      input[type="submit"] {
+        background-color: #4caf50;
+        color: white;
+        cursor: pointer;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #45a049;
+      }
+
+      h2 {
+        margin-top: 20px;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+      }
+
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+      }
+
+      th {
+        background-color: #4caf50;
+        color: white;
+      }
+
+      button {
+        background-color: #ff4444;
+        color: white;
+        padding: 8px;
+        margin-top: 10px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #cc0000;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="user_form">
+      <h1>Registration Form</h1>
+      <label for="name">Name</label>
+      <input
+        type="text"
+        name="name"
+        id="name"
+        placeholder="Enter Name"
+        required
+      />
+      <br />
+      <label for="email">Email</label>
+      <input
+        type="email"
+        name="email"
+        id="email"
+        placeholder="Enter Email"
+        required
+      />
+      <br />
+      <label for="password">Password</label>
+      <input
+        type="password"
+        name="password"
+        id="password"
+        placeholder="Enter Password"
+        required
+      />
+      <br />
+      <label for="dob">Date of Birth</label>
+      <input type="date" name="dob" id="dob" min="18" max="35" required />
+      <br />
+      <label for="accept">Accept Terms & Conditions</label>
+      <input type="checkbox" name="accept" id="accept" required />
+      <br />
+      <input type="submit" value="Submit" />
+    </form>
+    <div>
+      <h2>Entries</h2>
+      <div id="user-entries"></div>
+      <button id="clearButton">Clear Entries</button>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
